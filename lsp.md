@@ -1,0 +1,112 @@
+# warpx/src/language/lsp.rs
+
+- **Language:** Rust
+- **Semantic model:** 0.1.0
+- **Analyzer:** rust-analyzer
+- **Source lines:** 499
+
+## Symbols
+
+- **Constant** `REQUEST_TIMEOUT` — `Duration` (Known) — line 16, column 7, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@16:7`
+- **Function** `analyze` — `fn( root: &Path, sources: &[SourceFile], command: &Path, args: &[&str], language_id: &str, extension: LanguageExtension, ) -> Result<Vec<SemanticFile>, String>` (Known) — line 18, column 8, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@18:8`
+- **Variable** `mut client` — line 26, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@26:9`
+- **Variable** `root_uri` — line 27, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@27:9`
+- **Variable** `initialize` — line 28, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@28:9`
+- **Variable** `mut semantic` — line 58, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@58:9`
+- **Variable** `mut request_files` — line 59, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@59:9`
+- **Variable** `uri` — line 61, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@61:13`
+- **Variable** `id` — line 73, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@73:13`
+- **Variable** `indexes` — `HashMap<PathBuf, usize>` (Known) — line 81, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@81:9`
+- **Variable** `mut remaining` — line 86, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@86:9`
+- **Variable** `message` — line 88, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@88:13`
+- **Variable** `Some(id)` — line 93, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@93:13`
+- **Variable** `source` — line 99, column 25, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@99:25`
+- **Variable** `detail` — line 102, column 25, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@102:25`
+- **Variable** `absolute_to_relative` — `HashMap<PathBuf, String>` (Known) — line 123, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@123:9`
+- **Variable** `mut reference_requests` — line 132, column 9, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@132:9`
+- **Variable** `id` — line 135, column 17, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@135:17`
+- **Variable** `message` — line 150, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@150:13`
+- **Variable** `Some(id)` — line 155, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@155:13`
+- **Variable** `Some((file_index, symbol_index))` — line 158, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@158:13`
+- **Variable** `Some(locations)` — line 161, column 13, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@161:13`
+- **Variable** `Some(uri)` — line 165, column 17, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@165:17`
+- **Variable** `Some(absolute_path)` — line 168, column 17, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@168:17`
+- **Variable** `Some(start)` — line 171, column 17, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@171:17`
+- **Variable** `line` — line 174, column 17, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@174:17`
+- **Variable** `column` — line 179, column 17, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@179:17`
+- **Variable** `file` — line 184, column 17, scope `analyze`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@184:17`
+- **Function** `read_symbols` — `fn(value: &Value, source: &SourceFile, output: &mut Vec<Symbol>, parent: &str)` (Known) — line 204, column 4, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@204:4`
+- **Variable** `Some(items)` — line 205, column 9, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@205:9`
+- **Variable** `Some(name)` — line 209, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@209:13`
+- **Variable** `kind` — line 212, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@212:13`
+- **Variable** `detail` — line 218, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@218:13`
+- **Variable** `range` — line 219, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@219:13`
+- **Variable** `start` — line 223, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@223:13`
+- **Variable** `line` — line 224, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@224:13`
+- **Variable** `column` — line 229, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@229:13`
+- **Variable** `scope` — line 234, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@234:13`
+- **Variable** `id` — line 239, column 13, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@239:13`
+- **Variable** `child_parent` — line 257, column 17, scope `read_symbols`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@257:17`
+- **Function** `is_diagnostic_notification` — `fn(message: &Value) -> bool` (Known) — line 267, column 4, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@267:4`
+- **Function** `add_diagnostic_notification` — `fn( semantic: &mut [SemanticFile], indexes: &HashMap<PathBuf, usize>, message: &Value, )` (Known) — line 271, column 4, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@271:4`
+- **Variable** `params` — line 276, column 9, scope `add_diagnostic_notification`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@276:9`
+- **Variable** `Some(uri)` — line 277, column 9, scope `add_diagnostic_notification`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@277:9`
+- **Variable** `path` — line 280, column 9, scope `add_diagnostic_notification`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@280:9`
+- **Variable** `Some(relative)` — line 281, column 9, scope `add_diagnostic_notification`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@281:9`
+- **Variable** `Some(index)` — line 289, column 9, scope `add_diagnostic_notification`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@289:9`
+- **Function** `file_uri` — `fn(path: &Path) -> String` (Known) — line 305, column 4, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@305:4`
+- **Variable** `absolute` — line 306, column 9, scope `file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@306:9`
+- **Variable** `raw` — line 307, column 9, scope `file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@307:9`
+- **Variable** `mut encoded` — line 308, column 9, scope `file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@308:9`
+- **Function** `path_from_file_uri` — `fn(uri: &str) -> Option<PathBuf>` (Known) — line 320, column 4, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@320:4`
+- **Variable** `path` — line 321, column 9, scope `path_from_file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@321:9`
+- **Variable** `mut bytes` — line 322, column 9, scope `path_from_file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@322:9`
+- **Variable** `chars` — line 323, column 9, scope `path_from_file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@323:9`
+- **Variable** `mut index` — line 324, column 9, scope `path_from_file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@324:9`
+- **Variable** `hex` — line 327, column 17, scope `path_from_file_uri`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@327:17`
+- **Struct** `LspClient` — line 338, column 8, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@338:8`
+- **Field** `child` — `Child` (Known) — line 339, column 5, scope `LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@339:5`
+- **Field** `stdin` — `ChildStdin` (Known) — line 340, column 5, scope `LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@340:5`
+- **Field** `messages` — `Receiver<Result<Value, String>>` (Known) — line 341, column 5, scope `LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@341:5`
+- **Field** `next_id` — `u64` (Known) — line 342, column 5, scope `LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@342:5`
+  - Type properties: numeric=true, unsigned=true, min=0, max=18446744073709551615, bits=64
+- **Object** `impl LspClient` — line 345, column 6, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@345:6`
+- **Function** `start` — `fn(command: &Path, args: &[&str], root: &Path) -> Result<Self, String>` (Known) — line 346, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@346:8`
+- **Variable** `mut child` — line 347, column 13, scope `impl LspClient::start`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@347:13`
+- **Variable** `stdin` — line 361, column 13, scope `impl LspClient::start`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@361:13`
+- **Variable** `stdout` — line 367, column 13, scope `impl LspClient::start`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@367:13`
+- **Variable** `(sender, messages)` — line 373, column 13, scope `impl LspClient::start`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@373:13`
+- **Method** `send_request` — `fn(&mut self, method: &str, params: Value) -> Result<u64, String>` (Known) — line 385, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@385:8`
+- **Variable** `id` — line 386, column 13, scope `impl LspClient::send_request`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@386:13`
+- **Method** `request` — `fn(&mut self, method: &str, params: Value) -> Result<Value, String>` (Known) — line 392, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@392:8`
+- **Variable** `id` — line 393, column 13, scope `impl LspClient::request`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@393:13`
+- **Variable** `message` — line 395, column 17, scope `impl LspClient::request`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@395:17`
+- **Method** `notify` — `fn(&mut self, method: &str, params: Value) -> Result<(), String>` (Known) — line 402, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@402:8`
+- **Method** `send` — `fn(&mut self, value: &Value) -> Result<(), String>` (Known) — line 406, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@406:8`
+- **Variable** `body` — line 407, column 13, scope `impl LspClient::send`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@407:13`
+- **Method** `receive` — `fn(&self, timeout: Duration) -> Result<Value, String>` (Known) — line 415, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@415:8`
+- **Method** `drain` — `fn(&self, duration: Duration) -> Vec<Value>` (Known) — line 429, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@429:8`
+- **Variable** `mut messages` — line 430, column 13, scope `impl LspClient::drain`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@430:13`
+- **Method** `shutdown` — `fn(&mut self)` (Known) — line 437, column 8, scope `impl LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@437:8`
+- **Variable** `_` — line 438, column 13, scope `impl LspClient::shutdown`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@438:13`
+- **Variable** `_` — line 439, column 13, scope `impl LspClient::shutdown`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@439:13`
+- **Variable** `_` — line 440, column 13, scope `impl LspClient::shutdown`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@440:13`
+- **Variable** `_` — line 441, column 13, scope `impl LspClient::shutdown`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@441:13`
+- **Object** `impl Drop for LspClient` — line 445, column 15, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@445:15`
+- **Method** `drop` — `fn(&mut self)` (Known) — line 446, column 8, scope `impl Drop for LspClient`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@446:8`
+- **Variable** `_` — line 447, column 13, scope `impl Drop for LspClient::drop`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@447:13`
+- **Variable** `_` — line 448, column 13, scope `impl Drop for LspClient::drop`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@448:13`
+- **Function** `read_messages` — `fn(stdout: impl Read, sender: mpsc::Sender<Result<Value, String>>)` (Known) — line 452, column 4, scope `module`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@452:4`
+- **Variable** `mut reader` — line 453, column 9, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@453:9`
+- **Variable** `mut content_length` — line 455, column 13, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@455:13`
+- **Variable** `mut line` — line 456, column 13, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@456:13`
+- **Variable** `_` — line 463, column 25, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@463:25`
+- **Variable** `Some(length)` — line 476, column 13, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@476:13`
+- **Variable** `_` — line 477, column 17, scope `read_messages::Some(length)`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@477:17`
+- **Variable** `mut body` — line 482, column 13, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@482:13`
+- **Variable** `_` — line 484, column 17, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@484:17`
+- **Variable** `_` — line 494, column 21, scope `read_messages`, 0 reference(s), semantic ID `warpx/src/language/lsp.rs#symbol@494:21`
+
+## Findings
+
+No findings were reported with the available semantic evidence.

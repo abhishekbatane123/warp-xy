@@ -1,0 +1,152 @@
+# warpx/src/model.rs
+
+- **Language:** Rust
+- **Semantic model:** 0.1.0
+- **Analyzer:** rust-analyzer
+- **Source lines:** 406
+
+## Symbols
+
+- **Constant** `RUST_MODEL_VERSION` — `&str` (Known) — line 3, column 11, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@3:11`
+- **Constant** `PYTHON_MODEL_VERSION` — `&str` (Known) — line 4, column 11, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@4:11`
+- **Constant** `C_MODEL_VERSION` — `&str` (Known) — line 5, column 11, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@5:11`
+- **Enum** `Language` — line 8, column 10, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@8:10`
+- **Enum member** `Rust` — line 9, column 5, scope `Language`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@9:5`
+- **Enum member** `Python` — line 10, column 5, scope `Language`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@10:5`
+- **Enum member** `C` — line 11, column 5, scope `Language`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@11:5`
+- **Object** `impl Language` — line 14, column 6, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@14:6`
+- **Method** `model_version` — `fn(self) -> &'static str` (Known) — line 15, column 12, scope `impl Language`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@15:12`
+- **Method** `display_name` — `fn(self) -> &'static str` (Known) — line 23, column 12, scope `impl Language`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@23:12`
+- **Method** `analyzer_name` — `fn(self) -> &'static str` (Known) — line 31, column 12, scope `impl Language`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@31:12`
+- **Struct** `SourceFile` — line 41, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@41:12`
+- **Field** `absolute_path` — `PathBuf` (Known) — line 42, column 9, scope `SourceFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@42:9`
+- **Field** `relative_path` — `PathBuf` (Known) — line 43, column 9, scope `SourceFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@43:9`
+- **Field** `language` — `Language` (Known) — line 44, column 9, scope `SourceFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@44:9`
+- **Field** `source` — `String` (Known) — line 45, column 9, scope `SourceFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@45:9`
+- **Struct** `SemanticProject` — line 49, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@49:12`
+- **Field** `files` — `Vec<SemanticFile>` (Known) — line 50, column 9, scope `SemanticProject`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@50:9`
+- **Struct** `SemanticFile` — line 54, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@54:12`
+- **Field** `source` — `SourceFile` (Known) — line 55, column 9, scope `SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@55:9`
+- **Field** `symbols` — `Vec<Symbol>` (Known) — line 56, column 9, scope `SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@56:9`
+- **Field** `operations` — `Vec<Operation>` (Known) — line 57, column 9, scope `SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@57:9`
+- **Field** `control_flow` — `Vec<ControlFlowNode>` (Known) — line 58, column 9, scope `SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@58:9`
+- **Field** `data_flow` — `Vec<DataFlowEdge>` (Known) — line 59, column 9, scope `SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@59:9`
+- **Field** `findings` — `Vec<Finding>` (Known) — line 60, column 9, scope `SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@60:9`
+- **Field** `extension` — `LanguageExtension` (Known) — line 61, column 9, scope `SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@61:9`
+- **Object** `impl SemanticFile` — line 64, column 6, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@64:6`
+- **Function** `new` — `fn(source: SourceFile, extension: LanguageExtension) -> Self` (Known) — line 65, column 12, scope `impl SemanticFile`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@65:12`
+- **Enum** `LanguageExtension` — line 79, column 10, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@79:10`
+- **Enum member** `Rust` — line 80, column 5, scope `LanguageExtension`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@80:5`
+- **Field** `analyzer` — `String` (Known) — line 81, column 9, scope `LanguageExtension::Rust`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@81:9`
+- **Enum member** `Python` — line 83, column 5, scope `LanguageExtension`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@83:5`
+- **Field** `analyzer` — `String` (Known) — line 84, column 9, scope `LanguageExtension::Python`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@84:9`
+- **Field** `dynamic` — `bool` (Known) — line 85, column 9, scope `LanguageExtension::Python`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@85:9`
+- **Enum member** `C` — line 87, column 5, scope `LanguageExtension`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@87:5`
+- **Field** `analyzer` — `String` (Known) — line 88, column 9, scope `LanguageExtension::C`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@88:9`
+- **Field** `pointer_operations` — `usize` (Known) — line 89, column 9, scope `LanguageExtension::C`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@89:9`
+  - Type properties: numeric=true, unsigned=true
+- **Struct** `Symbol` — line 94, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@94:12`
+- **Field** `id` — `String` (Known) — line 96, column 9, scope `Symbol`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@96:9`
+- **Field** `name` — `String` (Known) — line 97, column 9, scope `Symbol`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@97:9`
+- **Field** `kind` — `String` (Known) — line 98, column 9, scope `Symbol`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@98:9`
+- **Field** `type_info` — `TypeInfo` (Known) — line 99, column 9, scope `Symbol`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@99:9`
+- **Field** `scope` — `String` (Known) — line 100, column 9, scope `Symbol`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@100:9`
+- **Field** `declaration` — `SourceLocation` (Known) — line 101, column 9, scope `Symbol`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@101:9`
+- **Field** `references` — `Vec<SymbolReference>` (Known) — line 102, column 9, scope `Symbol`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@102:9`
+- **Struct** `SymbolReference` — line 106, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@106:12`
+- **Field** `file` — `String` (Known) — line 107, column 9, scope `SymbolReference`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@107:9`
+- **Field** `location` — `SourceLocation` (Known) — line 108, column 9, scope `SymbolReference`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@108:9`
+- **Struct** `TypeInfo` — line 112, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@112:12`
+- **Field** `display_name` — `Option<String>` (Known) — line 113, column 9, scope `TypeInfo`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@113:9`
+- **Field** `properties` — `Vec<TypeProperty>` (Known) — line 114, column 9, scope `TypeInfo`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@114:9`
+- **Field** `certainty` — `TypeCertainty` (Known) — line 115, column 9, scope `TypeInfo`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@115:9`
+- **Struct** `TypeProperty` — line 119, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@119:12`
+- **Field** `key` — `String` (Known) — line 120, column 9, scope `TypeProperty`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@120:9`
+- **Field** `value` — `String` (Known) — line 121, column 9, scope `TypeProperty`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@121:9`
+- **Enum** `TypeCertainty` — line 125, column 10, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@125:10`
+- **Enum member** `Known` — line 126, column 5, scope `TypeCertainty`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@126:5`
+- **Enum member** `Inferred` — line 127, column 5, scope `TypeCertainty`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@127:5`
+- **Enum member** `Possible` — line 128, column 5, scope `TypeCertainty`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@128:5`
+- **Enum member** `Unknown` — line 130, column 5, scope `TypeCertainty`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@130:5`
+- **Object** `impl TypeCertainty` — line 133, column 6, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@133:6`
+- **Method** `label` — `fn(self) -> &'static str` (Known) — line 134, column 12, scope `impl TypeCertainty`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@134:12`
+- **Struct** `Operation` — line 145, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@145:12`
+- **Field** `kind` — `OperationKind` (Known) — line 146, column 9, scope `Operation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@146:9`
+- **Field** `expression` — `String` (Known) — line 147, column 9, scope `Operation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@147:9`
+- **Field** `result_type` — `TypeInfo` (Known) — line 148, column 9, scope `Operation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@148:9`
+- **Field** `location` — `SourceLocation` (Known) — line 149, column 9, scope `Operation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@149:9`
+- **Field** `operands` — `Vec<String>` (Known) — line 150, column 9, scope `Operation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@150:9`
+- **Enum** `OperationKind` — line 154, column 10, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@154:10`
+- **Enum member** `Addition` — line 155, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@155:5`
+- **Enum member** `Subtraction` — line 156, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@156:5`
+- **Enum member** `Multiplication` — line 157, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@157:5`
+- **Enum member** `Division` — line 158, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@158:5`
+- **Enum member** `Modulo` — line 159, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@159:5`
+- **Enum member** `Comparison` — line 160, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@160:5`
+- **Enum member** `Logical` — line 161, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@161:5`
+- **Enum member** `Assignment` — line 162, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@162:5`
+- **Enum member** `Indexing` — line 163, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@163:5`
+- **Enum member** `FunctionCall` — line 164, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@164:5`
+- **Enum member** `Cast` — line 165, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@165:5`
+- **Enum member** `Other` — line 166, column 5, scope `OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@166:5`
+- **Object** `impl OperationKind` — line 169, column 6, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@169:6`
+- **Method** `label` — `fn(self) -> &'static str` (Known) — line 170, column 12, scope `impl OperationKind`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@170:12`
+- **Struct** `ControlFlowNode` — line 189, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@189:12`
+- **Field** `kind` — `String` (Known) — line 190, column 9, scope `ControlFlowNode`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@190:9`
+- **Field** `location` — `SourceLocation` (Known) — line 191, column 9, scope `ControlFlowNode`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@191:9`
+- **Struct** `DataFlowEdge` — line 195, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@195:12`
+- **Field** `from` — `String` (Known) — line 196, column 9, scope `DataFlowEdge`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@196:9`
+- **Field** `to` — `String` (Known) — line 197, column 9, scope `DataFlowEdge`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@197:9`
+- **Field** `evidence` — `String` (Known) — line 198, column 9, scope `DataFlowEdge`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@198:9`
+- **Field** `location` — `SourceLocation` (Known) — line 199, column 9, scope `DataFlowEdge`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@199:9`
+- **Struct** `Finding` — line 203, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@203:12`
+- **Field** `id` — `String` (Known) — line 204, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@204:9`
+- **Field** `rule_id` — `String` (Known) — line 205, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@205:9`
+- **Field** `severity` — `Severity` (Known) — line 206, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@206:9`
+- **Field** `message` — `String` (Known) — line 207, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@207:9`
+- **Field** `explanation` — `String` (Known) — line 208, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@208:9`
+- **Field** `location` — `SourceLocation` (Known) — line 209, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@209:9`
+- **Field** `evidence` — `String` (Known) — line 210, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@210:9`
+- **Field** `confidence` — `Confidence` (Known) — line 211, column 9, scope `Finding`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@211:9`
+- **Enum** `Severity` — line 215, column 10, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@215:10`
+- **Enum member** `Error` — line 216, column 5, scope `Severity`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@216:5`
+- **Enum member** `Warning` — line 217, column 5, scope `Severity`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@217:5`
+- **Enum member** `Information` — line 218, column 5, scope `Severity`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@218:5`
+- **Enum member** `Hint` — line 219, column 5, scope `Severity`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@219:5`
+- **Object** `impl Severity` — line 222, column 6, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@222:6`
+- **Method** `label` — `fn(self) -> &'static str` (Known) — line 223, column 12, scope `impl Severity`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@223:12`
+- **Enum** `Confidence` — line 234, column 10, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@234:10`
+- **Enum member** `Certain` — line 235, column 5, scope `Confidence`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@235:5`
+- **Enum member** `Likely` — line 236, column 5, scope `Confidence`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@236:5`
+- **Enum member** `Possible` — line 237, column 5, scope `Confidence`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@237:5`
+- **Enum member** `Unknown` — line 238, column 5, scope `Confidence`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@238:5`
+- **Object** `impl Confidence` — line 241, column 6, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@241:6`
+- **Method** `label` — `fn(self) -> &'static str` (Known) — line 242, column 12, scope `impl Confidence`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@242:12`
+- **Struct** `SourceLocation` — line 253, column 12, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@253:12`
+- **Field** `line` — `usize` (Known) — line 254, column 9, scope `SourceLocation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@254:9`
+  - Type properties: numeric=true, unsigned=true
+- **Field** `column` — `usize` (Known) — line 255, column 9, scope `SourceLocation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@255:9`
+  - Type properties: numeric=true, unsigned=true
+- **Field** `offset` — `Option<usize>` (Known) — line 256, column 9, scope `SourceLocation`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@256:9`
+- **Function** `type_info` — `fn(display_name: Option<String>, certainty: TypeCertainty) -> TypeInfo` (Known) — line 259, column 8, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@259:8`
+- **Variable** `properties` — line 260, column 9, scope `type_info`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@260:9`
+- **Function** `type_properties` — `fn(name: &str) -> Vec<TypeProperty>` (Known) — line 271, column 4, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@271:4`
+- **Variable** `normalized` — line 272, column 9, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@272:9`
+- **Variable** `mut properties` — line 273, column 9, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@273:9`
+- **Variable** `numeric` — line 274, column 9, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@274:9`
+- **Variable** `unsigned` — line 305, column 9, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@305:9`
+- **Variable** `signed_integer` — line 313, column 9, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@313:9`
+- **Variable** `bits` — line 321, column 13, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@321:13`
+- **Variable** `minimum` — line 322, column 13, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@322:13`
+- **Variable** `maximum` — line 329, column 13, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@329:13`
+- **Variable** `bits` — line 350, column 13, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@350:13`
+- **Variable** `bit_width` — line 366, column 9, scope `type_properties`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@366:9`
+- **Module** `tests` — line 381, column 5, scope `module`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@381:5`
+- **Function** `describes_fixed_width_integer_bounds` — `fn()` (Known) — line 386, column 8, scope `tests`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@386:8`
+- **Variable** `unsigned` — line 387, column 13, scope `tests::describes_fixed_width_integer_bounds`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@387:13`
+- **Variable** `signed` — line 392, column 13, scope `tests::describes_fixed_width_integer_bounds`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@392:13`
+- **Variable** `function` — line 397, column 13, scope `tests::describes_fixed_width_integer_bounds`, 0 reference(s), semantic ID `warpx/src/model.rs#symbol@397:13`
+
+## Findings
+
+No findings were reported with the available semantic evidence.
